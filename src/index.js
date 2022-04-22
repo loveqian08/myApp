@@ -6,14 +6,14 @@ import 'antd-mobile/dist/antd-mobile.css';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import configStore from './redux/store/configStore';
-// 路由
+// 路由  "proxy": "http://localhost:9093"
 // import { BrowserRouter,Route,Switch } from 'react-router-dom';
 // import Main from './view/main';
 // import Login from './view/login';
 import Router from './router'
 // redux store 对象管理所有的Redux 状态
-const store = configStore();
-console.log(store.getState())
+// const store = configStore();
+console.log(configStore.getState())
 
 // function Two () {
 //   return <h1>俄罗斯</h1>
@@ -22,7 +22,7 @@ console.log(store.getState())
 //   return <h1>m美国</h1>
 // }
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={configStore}>
 
     <Router />
     {/* <<BrowserRouter>
